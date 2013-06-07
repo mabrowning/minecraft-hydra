@@ -16,7 +16,10 @@
 
 package com.mtbs3d.minecrift.hydra;
 
+import java.io.File;
+
 import de.fruitfly.ovr.OculusRift;
+import com.sixense.Sixense;
 
 /**
  * Implements head tracking interface of OculusRift, using
@@ -28,6 +31,16 @@ import de.fruitfly.ovr.OculusRift;
 class Oculus extends OculusRift
 {
 
+	boolean initialized = false;
+	@Override
+	public boolean init( File nativeDir ) {
+		Sixense.LoadLibrary( nativeDir );
+
+		initialized = true;  
+		this._initSummary = "Initialized";
+		return initialized;
+	}
+
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
@@ -36,8 +49,7 @@ class Oculus extends OculusRift
 
 	@Override
 	public String getInitializationStatus() {
-		// TODO Auto-generated method stub
-		return null;
+		return this._initSummary;
 	}
 
 	@Override
@@ -65,12 +77,6 @@ class Oculus extends OculusRift
 		return null;
 	}
 
-
-	@Override
-	public boolean init() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	@Override
 	public boolean isInitialized() {

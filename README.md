@@ -3,7 +3,7 @@ Razer Hydra Input for Minecraft VR (minecrift)
 
 This simple wrapper uses [sixense-java](https://github.com/mabrowning/Sixense-Java) to
 implement the IOculusRift interface in [JRift](http://github.com/mabrowning/JRift) for use
-in (Minecraft VR [minecrift](http://github.com/mabrowning/minecrift)).
+in Minecraft VR ([minecrift](http://github.com/mabrowning/minecrift)).
 
 Usage:
 ======
