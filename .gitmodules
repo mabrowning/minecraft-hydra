@@ -1,0 +1,6 @@
+[submodule "Sixense-Java"]
+	path = Sixense-Java
+	url = https://github.com/mabrowning/Sixense-Java.git
+[submodule "JRift"]
+	path = JRift
+	url = https://github.com/mabrowning/JRift.git
