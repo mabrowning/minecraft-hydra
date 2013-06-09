@@ -121,6 +121,7 @@ public class Oculus extends OculusRift implements ManagerCallback
 	public void poll() {
 		Sixense.getAllNewestData(newestData);
 		
+		/*
 		float[][] m = newestData[0].rot_mat;
 		
 		if( m[1][2] > 0.998 || m[1][2] < -0.998 )
@@ -135,6 +136,10 @@ public class Oculus extends OculusRift implements ManagerCallback
 			roll = (float)Math.toDegrees(Math.atan2(m[1][0], m[1][1]));
 		}
 		pitch = (float)-Math.toDegrees(Math.asin(m[1][2]));
+		*/
+		yaw = -newestData[0].yaw;
+		pitch = -newestData[0].pitch;
+		roll = -newestData[0].roll;
 	}
 
 
