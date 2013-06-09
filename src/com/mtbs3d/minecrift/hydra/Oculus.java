@@ -137,9 +137,9 @@ public class Oculus extends OculusRift implements ManagerCallback
 		}
 		pitch = (float)-Math.toDegrees(Math.asin(m[1][2]));
 		*/
-		yaw = -newestData[0].yaw;
-		pitch = -newestData[0].pitch;
-		roll = -newestData[0].roll;
+		yaw = newestData[0].yaw;
+		pitch = newestData[0].pitch;
+		roll = newestData[0].roll;
 	}
 
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <!-- Configuration of the Ant build system to generate a Jar file --> 
 <project name="MinecfitHydra" default="CreateJar">
-  <target name="CreateJar" description="Create Jar file">
-        <jar jarfile="MinecriftHydra.jar" basedir="." includes="*.class" />
+	<target name="Compile">
+  		<javac srcdir="src" destdir="bin" classpath="Sixense-Java/SixenseJava.jar:JRift/JRift.jar" />
+	</target>
+  <target name="CreateJar" depends="Compile" description="Create Jar file">
+        <jar jarfile="MinecriftHydra.jar" basedir="bin" />
   </target>
 </project>
